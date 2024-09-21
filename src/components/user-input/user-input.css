@@ -14,8 +14,38 @@
       resize: none;
       background-color: var(--gray-750);
       overflow: hidden;
+      border: none;
       &::placeholder {
         line-height: 20px;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    .enter-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      box-shadow: none;
+      display: block;
+      position: absolute;
+      bottom: 17%;
+      right: 7%;
+      color: var(--gray-750);
+      padding: 0;
+      background-color: var(--white);
+      svg {
+        height: 32px;
+        width: 32px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+      &:disabled {
+        background-color: var(--disabled-gray);
       }
     }
 }

@@ -7,6 +7,10 @@ import UserMessage from "./user-message";
 const MessageContainer = () => {
   const messages: Message[] = useMessagesStore((state) => state.messages);
 
+  if (messages.length === 0) {
+    return <div className="no-message"><ChatGPTIcon /></div>
+  }
+
   return (
     <>
       {messages.map((message, index) => (

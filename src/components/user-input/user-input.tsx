@@ -35,19 +35,20 @@ const UserInput = () => {
 
   return (
     <div className="user-input">
-
-      <TextareaAutosize 
-        disabled={requestToGPT}
-        name="user-input" 
-        placeholder="Type your message here" 
-        value={message}
-        onChange={(e) => setUserMessage(e.currentTarget.value)} 
-      />
-      <button 
-        disabled={message.trim() === ''}
-        onClick={() => {
-          onMessage()
-        }} className="enter-icon"><EnterIcon /></button>
+      <span>
+        <TextareaAutosize 
+          disabled={requestToGPT}
+          name="user-input" 
+          placeholder="Type your message here" 
+          value={message}
+          onChange={(e) => setUserMessage(e.currentTarget.value)} 
+        />
+        <button 
+          disabled={message.trim() === ''}
+          onClick={() => {
+            onMessage()
+          }} className="enter-icon"><EnterIcon /></button>
+      </span>
     </div>
   );
 };

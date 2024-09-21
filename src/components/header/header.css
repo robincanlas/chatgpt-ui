@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+
+  .new-chat-icon {
+    position: relative;
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+      .tooltiptext {
+        visibility: visible;
+      }
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: 97px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 150%;
+      left: 200%;
+      margin-left: -60px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 25%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+      }
+    }
+  }
+
+  .chatgpt-text {
+    font-weight: 600;
+    font-size: 18px; 
+  }
+
+  .login-button {
+    cursor: pointer;
+    background-color: rgb(249 249 249/1);
+    color: rgb(13 13 13 / 1);
+    min-height: 30px;
+    max-height: 30px;
+    padding: 4px 12px;
+    box-shadow: none;
+    border: none;
+    font-weight: 600;
+  }
+}

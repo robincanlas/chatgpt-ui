@@ -3,10 +3,7 @@
   justify-content: flex-end;
 
   .message {
-    background-color: var(--gray-700);
-    border-radius: 1.5rem;
-    position: relative;
-    padding: .625rem 1.25rem;
+    background-color: var(--gray-750);
   }
 }
 

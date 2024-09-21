@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@redux-devtools/extension": "^3.3.0",
-    "openai": "^4.63.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-textarea-autosize": "^8.5.3",

@@ -20,6 +20,8 @@ const UserInput = () => {
 
     setRequestToGPT(true);
     setTimeout(() => {
+      // Reset user message
+      setUserMessage('');
       // GPT mock response
       addMessage({
         id: uuidv4(), 
@@ -28,6 +30,7 @@ const UserInput = () => {
       });
       setRequestToGPT(false);
     }, 1000);
+
   };
 
   return (
@@ -37,6 +40,7 @@ const UserInput = () => {
         disabled={requestToGPT}
         name="user-input" 
         placeholder="Type your message here" 
+        value={message}
         onChange={(e) => setUserMessage(e.currentTarget.value)} 
       />
       <button 

@@ -14,21 +14,28 @@ export interface Message {
   stream?: STREAMING
 }
 
-export interface MessagesStore {
+type InitialState = {
   messages: Message[];
   requestToGPT: boolean;
+}
+
+export interface MessagesStore extends InitialState {
   addMessage: (message: Message) => void;
   setRequestToGPT: (requestToGPT: boolean) => void;
   setStreaming: (uuid: string, stream: STREAMING) => void;
+  reset: () => void;
+}
+
+const initialState: InitialState = {
+  messages: [],
+  requestToGPT: false,
 }
 
 const useMessagesStore = create<MessagesStore>()(
   devtools(
     persist(
       (set) => ({
-        messages: [],
-        requestToGPT: false,
-        streaming: false,
+        ...initialState,
         addMessage: (message: Message) => set((state) => ({ messages: [...state.messages, message] })),
         setRequestToGPT: (requestToGPT: boolean) => set({ requestToGPT }),
         setStreaming: (uuid: string, stream: STREAMING) => set((state) => {
@@ -37,6 +44,7 @@ const useMessagesStore = create<MessagesStore>()(
           messages[index].stream = stream;
           return { messages };
         }),
+        reset: () => set(initialState)
       }),
       {
         name: 'messages-storage',

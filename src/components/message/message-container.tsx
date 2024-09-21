@@ -12,18 +12,20 @@ const MessageContainer = () => {
   }
 
   return (
-    <>
+    <div className="message-container">
       {messages.map((message, index) => (
         <div key={index} className={message.assistant ? 'assistant-message' : 'user-message'}>
           {!message.assistant ? 
           <UserMessage message={message.message} /> : 
           <>
-            <span className="chatgpt-icon"><ChatGPTIcon /></span>
-            <span><AiMessage message={message}/></span>
+            <div>
+              <span className="chatgpt-icon"><ChatGPTIcon /></span>
+            </div>
+            <span className="message"><AiMessage message={message}/></span>
           </>}
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

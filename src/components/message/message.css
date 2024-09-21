@@ -70,3 +70,17 @@
       max-width: 80%;
     }
 }
+
+.typewriter-cursor {
+  background-color: #fff;
+  width: 10px;
+  display: inline-block;
+  height: 18px;
+  animation: 500ms blink step-end infinite;
+}
+
+@keyframes blink {
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+}

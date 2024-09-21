@@ -7,9 +7,15 @@ const Header = () => {
 
   return (
     <div className="header">
-      <button onClick={reset} className="new-chat-icon"><NewChatIcon /><span className="tooltiptext">New chat</span></button>
-      <div className="chatgpt-text">ChatGPT</div>
-      <button className="pill-styling login-button" onClick={() => alert("Coming soon")}>Log in</button>
+      <div className="left-section">
+        <button onClick={reset} className="new-chat-icon"><NewChatIcon /><span className="tooltiptext">New chat</span></button>
+        <div className="chatgpt-text desktop">ChatGPT</div>
+      </div>
+      <div className="chatgpt-text tablet">ChatGPT</div>
+      <div className="right-section">
+        <button className="pill-styling login-button" onClick={() => alert("Coming soon")}>Log in</button>
+        <button className="pill-styling login-button signup-button desktop" onClick={() => alert("Coming soon")}>Sign up</button>
+      </div>
     </div>
   );
 };

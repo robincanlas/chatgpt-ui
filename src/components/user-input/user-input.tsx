@@ -5,7 +5,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 import "./user-input.css";
 import EnterIcon from "../icons/enter-icon";
 
-const staticAiMessage = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+const staticAiMessage = "Hello, thank you for your interest in this demo of the ChatGPT user interface. Please note that it currently does not connect to any backend services and is still under development. We appreciate your understanding.";
 
 const UserInput = () => {
   const { addMessage, setRequestToGPT, requestToGPT }: MessagesStore = useMessagesStore((state) => state);

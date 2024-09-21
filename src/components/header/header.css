@@ -55,6 +55,19 @@
     font-size: 18px; 
     color: var(--gray-400);
   }
+  
+  .left-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .right-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 10px;
+  }
 
   .login-button {
     cursor: pointer;
@@ -66,5 +79,10 @@
     box-shadow: none;
     border: none;
     font-weight: 600;
+  }
+
+  .signup-button {
+    background-color: rgb(13 13 13 / 1);
+    color:rgb(249 249 249/1);
   }
 }

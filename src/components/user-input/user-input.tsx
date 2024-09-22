@@ -5,7 +5,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 import "./user-input.css";
 import EnterIcon from "../icons/enter-icon";
 
-const staticAiMessage = "Hello, thank you for your interest in this demo of the ChatGPT user interface. Please note that it currently does not connect to any backend services and is still under development. We appreciate your understanding.";
+const staticAiMessage = "Hello, thank you for your interest in this demo of the ChatGPT user interface. Please note that it's currently does not connect to any backend services and is still under development. We appreciate your understanding.";
 
 const UserInput = () => {
   const { addMessage, setRequestToGPT, requestToGPT }: MessagesStore = useMessagesStore((state) => state);
@@ -19,9 +19,10 @@ const UserInput = () => {
     });
 
     setRequestToGPT(true);
+    setUserMessage('');
+
     setTimeout(() => {
       // Reset user message
-      setUserMessage('');
       // GPT mock response
       addMessage({
         id: uuidv4(), 

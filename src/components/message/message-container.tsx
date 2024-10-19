@@ -16,7 +16,7 @@ const MessageContainer = () => {
       {messages.map((message, index) => (
         <div key={index} className={message.assistant ? 'assistant-message' : 'user-message'}>
           {!message.assistant ? 
-          <UserMessage message={message.message} /> : 
+          <UserMessage message={message} /> : 
           <>
             <div>
               <span className="chatgpt-icon"><ChatGPTIcon /></span>

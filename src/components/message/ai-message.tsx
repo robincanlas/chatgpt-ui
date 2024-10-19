@@ -2,16 +2,17 @@ import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import useMessagesStore, { Message, STREAMING } from '../../store/messages';
 import "./message.css";
 import useScrollIntoView from '../../hooks/useScrollIntoView';
+import useScrollIntoLastMessage from '../../hooks/useScrollIntoLastMessage';
 
 interface AiMessageProps {
   message: Message;
 }
-
 const AiMessage = ({
   message
 }: AiMessageProps) => {
   const setStreaming = useMessagesStore((state) => state.setStreaming);
-  const { elementRef, smoothScrollIntoView } = useScrollIntoView();
+  const { elementRef, smoothScrollIntoView, instantScrollIntoView } = useScrollIntoView();
+  useScrollIntoLastMessage(message, () => instantScrollIntoView());
 
   return (
     <span ref={elementRef}>
